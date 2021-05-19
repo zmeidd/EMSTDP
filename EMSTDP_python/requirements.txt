@@ -1,0 +1,7 @@
+numpy==1.15.1
+ray==0.5.3
+Keras==2.2.4
+tqdm==4.26.0
+matplotlib==2.2.3
+opt_einsum==0+untagged.25.geee2bb2
+tensorboard_logger==0.1.0
