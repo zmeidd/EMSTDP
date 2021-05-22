@@ -20,7 +20,7 @@ This repo consists of both python implementation of EMSTDP and Loihi implementat
         - https://ray.readthedocs.io/en/latest/tune.html
         - allows for visualization through Tensorboard, checkpoints and various scalable hyperparameter search algorithms
     - can be used single runs as well
-  -------
+--------
 **Run**
 ------
 ```
