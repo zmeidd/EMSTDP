@@ -64,7 +64,6 @@ python3 EMSTDP_main.py
  - neural_network.py:
   - 2 layers Neural network applied to MNIST
   - MSTAR, MNIST data preprocessing functions.
-  -
 -----
 
 
