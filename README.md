@@ -62,7 +62,7 @@ python3 EMSTDP_main.py
    - Builds an entire EMSTDP network on Loihi
    
  - neural_network.py:
-   -2 layers Neural network applied to MNIST
+   - 2 layers Neural network applied to MNIST
    - MSTAR, MNIST data preprocessing functions.
 -----
 
