@@ -46,7 +46,7 @@ python3 EMSTDP_main.py
       - wgt: Initialized weights, used for feedforward path
       - bwgt: backpropagation weights
       
-    - genTrainingData(): Generating training data, the built in datasets are MNIST, MSTAR 7 classes and MSTAR 10 classes
+    - genTrainingData(): Generating training data, the built-in datasets are MNIST, MSTAR 7 classes and MSTAR 10 classes
     
 - epl_parameters.py
    - Set up the parameters for EMSTDP loihi learning
