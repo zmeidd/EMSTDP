@@ -28,13 +28,14 @@ This repo consists of both python and Loihi implementations of EMSTDP. The autho
 python3 EMSTDP_main.py 
 ```
 **Dependencies**
-- numpy==1.15.1
+- numpy==1.19.2
 - ray==0.5.3
 - Keras==2.2.4
-- tqdm==4.26.0
-- matplotlib==2.2.3
+- tqdm==4.50.2
+- matplotlib==3.3.2
 - opt_einsum==0+untagged.25.geee2bb2
 - tensorboard_logger==0.1.0
+- Python== 3.8.5
 
 **Loihi Implementaion of EMSTDP**
 -----
