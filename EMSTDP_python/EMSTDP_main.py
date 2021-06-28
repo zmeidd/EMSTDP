@@ -14,7 +14,7 @@ import numpy as np
 import EMSTDP_algo as svp
 # import BPSNN_allSpikeErr_batcheventstdp2 as svp
 import matplotlib.pyplot as plt
-import cPickle as pickle
+import pickle
 import gzip
 import time
 import random
@@ -66,7 +66,7 @@ h = [100]  # [100,300,500,700,test_size,1500]
 ind = -1
 
 T = 100
-twin = T / 2 - 1
+twin = int(T / 2 - 1)
 epsilon = 3
 scale = 1.0
 bias = 0.0
@@ -128,7 +128,7 @@ for ep in range(epochs):
 
                 pred[i2 * tbs:(i2 + 1) * tbs] = snn_network.Test(spikes2.astype(float), tbs)
             acn = sum(pred == labelTest[:test_size]) / float(test_size)
-            print str(ep) + " test_accuray " + str(acn) + " LR " + str(snn_network.lr)
+            print( str(ep) + " test_accuray " + str(acn) + " LR " + str(snn_network.lr))
             acc.append(sum(pred == labelTest[:test_size]) / float(test_size))
 
         tmp_rand = np.random.random([T, 1, 1])
@@ -140,5 +140,5 @@ for ep in range(epochs):
         label[s_index[i * batch_size:(i + 1) * batch_size]]), batch_size)
         # sys.stdout.flush()
     acn = sum(pred1 == label[s_index[:train_size]]) / float(train_size)
-    print str(ep) + " train_accuray " + str(acn)
+    print (str(ep) + " train_accuray " + str(acn))
 
