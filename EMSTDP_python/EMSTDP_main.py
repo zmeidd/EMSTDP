@@ -41,7 +41,7 @@ train_size = 10000                          # verification period
 test_size = 10000                           # verification test size
 ver_period = train_size
 
-epochs = 10000                              # number of epochs
+epochs = 1000                              # number of epochs
 
 
 ## extract images and labels
@@ -66,7 +66,7 @@ h = [100]  # [100,300,500,700,test_size,1500]
 ind = -1
 
 T = 100
-twin = int(T / 2 - 1)
+twin = int( T / 2 - 1)
 epsilon = 3
 scale = 1.0
 bias = 0.0
@@ -85,7 +85,7 @@ hiddenThr1 = 0.5
 outputThr1 = 0.1
 
 energies = np.zeros([train_size])
-batch_energy = np.zeros([train_size / 50])  # bach_size = 50
+batch_energy = np.zeros([int(train_size / 50)])  # bach_size = 50
 ind += 1
 acc = []
 
@@ -115,7 +115,7 @@ for ep in range(epochs):
     spikes = np.zeros([T, batch_size, 784]).astype(float)
     spikes2 = np.zeros([T, batch_size, 784]).astype(float)
     # for i in trange(train_size / batch_size, leave=False):
-    for i in trange(train_size / batch_size):
+    for i in trange(int (train_size / batch_size)):
         if ((i + 1) * batch_size % ver_period == 0):  # 5000
             pred = np.zeros([test_size])
             for i2 in range(test_size / tbs):  # train_size
@@ -140,5 +140,7 @@ for ep in range(epochs):
         label[s_index[i * batch_size:(i + 1) * batch_size]]), batch_size)
         # sys.stdout.flush()
     acn = sum(pred1 == label[s_index[:train_size]]) / float(train_size)
-    print (str(ep) + " train_accuray " + str(acn))
+    print(str(ep) + " train_accuray " + str(acn))
+    np.save("w_h.npy", snn_network.w_h)
+    np.save("w_o.npy",snn_network.w_o)
 
